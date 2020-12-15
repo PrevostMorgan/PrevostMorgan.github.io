@@ -32,12 +32,15 @@ var init = function (window) {
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        for (var i = 0; i <= 5; i++) {
-            console.log(i + circle);
-            drawCircle();
-        }
+        //for (var i = 0; i <= 5; i++) {
+            //console.log(i + circle);
+            //drawCircle();
+        //}
+            for (var i = 0; i < 100; i++){
+                drawCircle();
+                console.log(i + circle);   
+            }
         
-
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -47,22 +50,26 @@ var init = function (window) {
         In each frame, for every circle, it should redraw that circle
         and check to see if it has drifted off the screen.         
         */
-        function update() {
-         
-            // TODO 4 : Update the circle's position //
-         physikz.updatePosition(circles[0]);
-         physikz.updatePosition(circles[1]);   
-         physikz.updatePosition(circles[2]);
-         physikz.updatePosition(circles[3]);
-         physikz.updatePosition(circles[4]);
-            // TODO 5 : Call game.checkCirclePosition() on your circles.
-           
+        function update(circle) {
 
-            // TODO 8 : Iterate over the array
-           
-            
+               // TODO 8 : Iterate over the array    
+            for (var i = 0; i < circles.length; i++) {
+                // update(circles[i]);
+                   // TODO 4 : Update the circle's position //
+                 physikz.updatePosition(circles[i]);
+         
+         // TODO 5 : Call game.checkCirclePosition() on your circles.
+                game.checkCirclePosition(circles[i]);
+            }
+         
+         
+        
         }
+        
+            
+        
     
+       
         /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
@@ -76,7 +83,16 @@ var init = function (window) {
             }
             
             // TODO 5 : YOUR CODE STARTS HERE //////////////////////
-            
+                        
+            if (circle.x < 0) {
+                circle.x = 0;
+            }
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+            if (circle.y < 0){
+                circle.y = 0;
+            }
 
 
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
