@@ -32,25 +32,40 @@ With your partner, consider each of these questions and make sure you are aligne
 
 ### User Story / Gameplay
 - Describe the gameplay
+//its like ping pong
 - What are the conditions when the game begins? 
+//press the start button
 - Does the game have an end? If so, what are the conditions for when it ends?
+//when the ball goes out of player's bounds
 - What `if`s will there be?
+//if gameItem > boardWidth add point and reset
+if gameItem = boardHeight bounce off, changeDirection 
 
 ### Visual Game Components:
 - What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
   - Which will be static? (the board)
+  //board,score
   - Which will be animated? (the box)
+  //paddle 1 & 2, ball
 - What data will you need to manage each game component? For example, in Bouncing Box, the data values were `positionX`, `speedX`, and `points`.
+//position X & Y, speed, points
+ 
 
 ### Events / Logic 
 - What events will occur in this game? (timer events, keyboard events, clicking events?)
+//Keyboard events:paddle 1 moves when up and down arrows are pressed, paddle 2 moves when w & s are pressed
+//Add point when ball hits bound 
 - How do those events affect the data of the program?
+//adds to score variable
 - For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
-
 For example: in bouncing box, when the box is clicked:
 1. The speed is increased
 2. The point total goes up by 1 and is displayed on the box
 3. The position of the box is reset to 0
+//when ball goes out of bounds 
+  1. 1 point is added to opposite player's score 
+  2. displayed on score box
+  3. ball is reset to starting position
 
 # Grade Rubric and Schedule
 

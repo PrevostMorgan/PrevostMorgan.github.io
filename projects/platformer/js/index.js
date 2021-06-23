@@ -40,7 +40,6 @@ $(document).ready(function () {
         
         playerManager.update();
     }
-
     function onProjectileOverlap() {
         console.log('Halle hit!');
         game.player.die();
