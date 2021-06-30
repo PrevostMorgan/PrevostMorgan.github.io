@@ -22,14 +22,16 @@ function applyFilter(){
     for (var i = image; i < image.length; i++){
         for (var j = image; j < image[i].length; j++){
             image[i][j] = [];
+            var rgbString = "rgb(150, 150, 150)"; 
+            rgbArr = rgbNumbers;
+            rgbNumbers = rgbStringToArray(rgbString));
+            rgbNumbers[RED] = 225;
         }
-    }
-    var rgbString = "rgb(150, 150, 150)";
-    let rgbNumbers = {};
-    rgbArr = rgbNumbers;
-    rgbStringToArray(rgbString);
 
-    rgbNumbers[RED] = 225;
+    }
+
+
+    //rgbNumbers[RED] = 225;//
 }
 
 // TODO 5: Create the applyFilterNoBackground function
