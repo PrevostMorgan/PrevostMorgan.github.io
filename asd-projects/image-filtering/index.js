@@ -21,17 +21,17 @@ debugger;
 function applyFilter(){
     for (var i = image; i < image.length; i++){
         for (var j = image; j < image[i].length; j++){
-            image[i][j] = [];
-            var rgbString = "rgb(150, 150, 150)"; 
-            rgbArr = rgbNumbers;
-            rgbNumbers = rgbStringToArray(rgbString));
+            image[i][j] = rgbNumbers; 
+            var rgbString = rgbNumbers;
+            rgbStringToArray(rgbString);
             rgbNumbers[RED] = 225;
+            rgbArrayToString(rgbNumbers);
+            
         }
 
     }
 
 
-    //rgbNumbers[RED] = 225;//
 }
 
 // TODO 5: Create the applyFilterNoBackground function
