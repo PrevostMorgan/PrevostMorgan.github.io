@@ -18,12 +18,14 @@ $(document).ready(function(){
 debugger;
 // TODO 1 & 3: Create the applyFilter function here
 function applyFilter(){
-    for (var i = image; i < image.length; i++){
-        for (var j = image; j < image[i].length; j++){
+    for (var i = 0; i < image.length; i++){
+        for (var j = 0; j < image[i].length; j++){
             var rgbString = image[i][j];
+            //rgbString = rgbArrayToString(rgbNumbers);//
             var rgbNumbers = rgbStringToArray(rgbString);
             rgbNumbers[RED] = 225;
-            rgbString = rgbArraytoString(rgbNumbers);
+            rgbString = rgbArrayToString(rgbNumbers);
+            //image[i][j] = rgbArrayToString(rgbNumbers);//
         }
 
     }
