@@ -36,9 +36,9 @@ function reddify(rgbNumbers){
  rgbNumbers[RED] = 225;
 }
 function decreaseBlue(rgbNumbers){
-  Math.max(rgbNumbers[BLUE] = -30);
+rgbNumbers[BLUE] = Math.max(rgbNumbers[BLUE] - 30,0);
 }
 function increaseGreenByBlue(rgbNumbers){
-Math.min(rgbNumbers[BLUE] + rgbNumbers[GREEN]);
+rgbNumbers[GREEN] = Math.min(rgbNumbers[BLUE] + rgbNumbers[GREEN]);
 }
 // CHALLENGE code goes below here
