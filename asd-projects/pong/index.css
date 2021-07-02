@@ -16,6 +16,69 @@ body {
   width: 50px;
   height: 50px;
   position: absolute;
-/*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
+ /*  left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
 }
+#leftPaddle { /*player2*/
+  /* appearance */
+  background-color: red;
+  width: 20px;
+  height: 80px;
+  border-radius: 80px;
+  
+  /* positioning */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+#player2Score {
+  /* appearance */
+  background-color:red;
+  width: 80px;
+  height: 100px;
+  border-radius: 100px;
+  
+  /* positioning */
+  position: absolute;
+  top: 0px;
+  left: 600px;
+}
+
+#rightPaddle { /*player1*/ 
+  /* appearance */
+  background-color:cyan;
+  width: 20px;
+  height: 80px;
+  border-radius: 80px;
+  
+  /* positioning */
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+#player1Score {
+  /* appearance */
+  background-color:cyan;
+  width: 80px;
+  height: 100px;
+  border-radius: 100px;
+  
+  /* positioning */
+  position: absolute;
+  top: 0px;
+  left: 442px;
+}
+#ball {
+  /* appearance */
+  background-color:white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  
+  /* positioning */
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+

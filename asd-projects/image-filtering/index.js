@@ -32,13 +32,16 @@ function applyFilter(filterFunction){
 // TODO 5: Create the applyFilterNoBackground function
 
 // TODO 2 & 4: Create filter functions
+//turns up red//
 function reddify(rgbNumbers){
- rgbNumbers[RED] = 225;
+    rgbNumbers[RED] = 225;
 }
+//descreases blue values by 30//
 function decreaseBlue(rgbNumbers){
-rgbNumbers[BLUE] = Math.max(rgbNumbers[BLUE] - 30,0);
+    rgbNumbers[BLUE] = Math.max(rgbNumbers[BLUE] - 30,0);
 }
+//adds blue to green values without going over 225//
 function increaseGreenByBlue(rgbNumbers){
-rgbNumbers[GREEN] = Math.min(rgbNumbers[BLUE] + rgbNumbers[GREEN]);
+    rgbNumbers[GREEN] = Math.min(rgbNumbers[BLUE] + rgbNumbers[GREEN],225);
 }
 // CHALLENGE code goes below here
